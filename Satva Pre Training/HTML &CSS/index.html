@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A comprehensive HTML and CSS demonstration website">
+    <meta name="author" content="Tanmay Trivedi">
+    <title>HTML & CSS Showcase</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: var(--secondary-color);
+            padding: 0.5em 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 2em;
+        }
+
+        section {
+            margin-bottom: 2em;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1em;
+        }
+
+        .card {
+            background: #f4f4f4;
+            padding: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML & CSS Showcase</h1>
+    </header>
+    <nav>
+        <a href="#forms">Forms</a>
+        <a href="#media">Media</a>
+        <a href="#tables">Tables</a>
+        <a href="#grid">Grid</a>
+    </nav>
+    <main>
+        <section id="forms">
+            <h2>Forms</h2>
+            <form action="/submit" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write something..."></textarea>
+                <br><br>
+                <label for="color">Choose a color:</label>
+                <input type="color" id="color" name="color">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <section id="media">
+            <h2>Media</h2>
+            <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+            <video controls>
+                <source src="example.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section id="tables">
+            <h2>Tables</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tanmay</td>
+                        <td>25</td>
+                        <td>Ahmedabad</td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>30</td>
+                        <td>New York</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="grid">
+            <h2>Grid Layout</h2>
+            <div class="grid-container">
+                <div class="card">Card 1</div>
+                <div class="card">Card 2</div>
+                <div class="card">Card 3</div>
+                <div class="card">Card 4</div>
+            </div>
+        </section>
+        <section id="tooltip">
+            <h2>Tooltip</h2>
+            <div class="tooltip">Hover over me
+                <span class="tooltiptext">Tooltip text</span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tanmay Trivedi. All rights reserved.</p>
+    </footer>
+</body>
+</html>
